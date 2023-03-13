@@ -8,15 +8,15 @@ metadata:
 spec:
   template:
     metadata:
-     name: myreplicaset
-     labels:
-      app: myapp
-      type: front-end
-    spec: 
-     containers:
-      name: nginx-controller
-      image: nginx
+      name: myreplicaset
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-controller
+          image: nginx
   replicas: 3
-  selector: 
-   matchLabels:
-    type: front-end
+  selector:
+    matchLabels:
+      type: front-end
